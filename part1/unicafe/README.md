@@ -10,12 +10,3 @@
 Пока никто не нажал кнопку, пишется "No feedback given". Статистика выводится в таблице.
 
 Компоненты: Button, Statistics, StatisticLine. Состояние хранится в App через useState.
-
-## Как запустить
-
-```
-npm install
-npm run dev
-```
-
-Потом открыть http://localhost:5173
