@@ -8,7 +8,7 @@
     "dev": "node --watch index.js",
     "db": "node db.js",
     "build:ui": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\" && cd ../phonebook-frontend && npm run build && node -e \"require('fs').cpSync('dist','../phonebook-backend/dist',{recursive:true})\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint ."
   },
   "keywords": [],
   "author": "VladimirEngels",
@@ -21,6 +21,10 @@
     "morgan": "^1.12.1"
   },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@stylistic/eslint-plugin": "^5.10.0",
+    "eslint": "^10.13.0",
+    "globals": "^17.13.0",
     "mongodb-memory-server": "^11.3.0"
   }
 }
