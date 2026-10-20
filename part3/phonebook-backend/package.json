@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "dev": "node --watch index.js",
+    "build:ui": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\" && cd ../phonebook-frontend && npm run build && node -e \"require('fs').cpSync('dist','../phonebook-backend/dist',{recursive:true})\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
