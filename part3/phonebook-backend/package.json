@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "dev": "node --watch index.js",
+    "db": "node db.js",
     "build:ui": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\" && cd ../phonebook-frontend && npm run build && node -e \"require('fs').cpSync('dist','../phonebook-backend/dist',{recursive:true})\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -14,7 +15,12 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "dotenv": "^18.0.8",
     "express": "^5.3.0",
+    "mongoose": "^9.11.2",
     "morgan": "^1.12.1"
+  },
+  "devDependencies": {
+    "mongodb-memory-server": "^11.3.0"
   }
 }
