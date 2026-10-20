@@ -35,6 +35,7 @@
 - GET /api/users - все пользователи с их блогами, хеш пароля не показывается
 - POST /api/users - создать пользователя. username и пароль должны быть не короче 3 символов, username уникальный
 - POST /api/login - вход, возвращает токен. Токен действует 1 час
+- POST /api/testing/reset - очищает базу, есть только при NODE_ENV=test (npm run start:test), нужен для E2E тестов из части 5
 
 Токен передаётся в заголовке Authorization: Bearer токен. tokenExtractor достаёт токен из заголовка, а userExtractor находит по нему пользователя и кладёт в request.user. userExtractor подключён только к POST и DELETE блогов.
 
